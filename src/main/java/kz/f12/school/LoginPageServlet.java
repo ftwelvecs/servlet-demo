@@ -6,14 +6,11 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.io.PrintWriter;
 
 @WebServlet("/login")
 public class LoginPageServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        resp.setContentType("text/html");
-        PrintWriter writer = resp.getWriter();
-        writer.write("<h1>Login page Servlet</h1>");
+        req.getRequestDispatcher("login.jsp").forward(req, resp);
     }
 }
