@@ -4,4 +4,15 @@
          xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
 		  http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
          version="3.0">
+    <!-- регистрируем сервлет -->
+    <servlet>
+        <servlet-name>helloWorld</servlet-name>
+        <servlet-class>kz.f12.school.HelloWorldServlet</servlet-class>
+    </servlet>
+
+    <!-- связываем сервлет с URL -->
+    <servlet-mapping>
+        <servlet-name>helloWorld</servlet-name>
+        <url-pattern>/hello</url-pattern>
+    </servlet-mapping>
 </web-app>
